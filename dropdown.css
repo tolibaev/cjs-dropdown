@@ -1,0 +1,52 @@
+.dropdown {
+  position: relative;
+}
+.dropdown__btn,
+.dropdown__list-btn {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+.dropdown__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+
+  filter: opacity(0);
+  visibility: hidden;
+  top: 0;
+  pointer-events: none;
+
+  transition: filter 0.3s, visibility 0.3s, top 0.3s;
+}
+.dropdown.open .dropdown__list {
+  filter: opacity(1);
+  visibility: visible;
+  top: 100%;
+  pointer-events: all;
+}
+.dropdown__input {
+  padding: 0;
+  border: none;
+
+  /* Contain text within 1px box */
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+  /* Keep the layout */
+  position: absolute;
+  /* Remove any visible trace (e.g. background color) */
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%); /* browsers in the future */
+  /* Prevent the screen reader to skip spaces between words */
+  white-space: nowrap;
+}

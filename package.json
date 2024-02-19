@@ -1,0 +1,9 @@
+{
+  "name": "cjs-dropdown",
+  "version": "1.0.0",
+  "main": "dropdown.js",
+  "module": "dropdown.js",
+  "author": "Rinat",
+  "type": "module",
+  "license": "ISC"
+}
